@@ -1,1 +1,0 @@
-memberSearchIndex = [{"p":"com.exemplos.configuracoes.problema2Singleton","c":"ConfigManager","l":"getConfig(String)","u":"getConfig(java.lang.String)"},{"p":"com.exemplos.configuracoes.problema2Singleton","c":"ConfigManager","l":"getInstance()"}];updateSearchResults();

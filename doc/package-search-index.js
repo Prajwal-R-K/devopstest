@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.exemplos.configuracoes.problema2Singleton"}];updateSearchResults();
