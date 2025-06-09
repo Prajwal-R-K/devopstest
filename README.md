@@ -1,49 +1,46 @@
-🌍 [Leia em Português](README.pt-BR.md)
+# Secret Santa Web App
 
-# Digital Bank Api
+This document outlines the end-to-end page flow for the Secret Santa web application.
 
-REST Api for a digital bank developed in `Java` using `Spring` and `Maven`.
+## Page Flow
 
-## Technologies Used
+The application guides users through the process of setting up and participating in a Secret Santa gift exchange. The flow is as follows:
 
-- `Java` - API Development.
-- `Spring` - Auto configurate.
-- `Maven` - Automation of builds to manage dependencies.
+*   **Landing Page:**
+    *   Introduction to the Secret Santa app.
+    *   Option to start a new Secret Santa exchange or join an existing one.
 
-## Steps to install and run
+*   **Start New Secret Santa:**
+    *   User is prompted to enter details for the new exchange:
+        *   Name of the exchange (e.g., "Office Holiday Party", "Family Christmas").
+        *   Budget (optional).
+        *   Date for gift exchange (optional).
+    *   User enters their own name and email address to create the exchange.
+    *   Option to add other participants manually by entering their names and email addresses.
+    *   Option to generate a shareable link to invite participants.
 
-1. Clone the repository:
+*   **Join Existing Secret Santa:**
+    *   User is prompted to enter the shareable link provided by the exchange organizer.
+    *   User enters their name and email address to join the exchange.
 
-```bash
-git clone https://github.com/felipeclarindo/digital-bank-api.git
+*   **Exchange Page (after starting or joining):**
+    *   Displays the name and details of the exchange.
+    *   Shows the list of participants.
+    *   Once all participants have joined, the organizer (or the system automatically after a set time) can trigger the drawing.
+    *   Participants receive an email with the name of the person they need to buy a gift for.
+    *   Options to view rules, budget, and exchange date.
+
+*   **Drawing Process:**
+    *   The application randomly matches participants, ensuring no one is matched with themselves and, ideally, avoiding direct swaps between two people (A gets B, B gets A).
+    *   Emails are sent out to each participant revealing their assigned recipient.
+
+*   **Post-Drawing:**
+    *   Participants can refer back to the exchange page for details and rules.
+    *   Communication features (optional): ability for participants to send anonymous messages to the organizer with questions.
+
+## Getting Started (Developer Notes)
+
+This is a minimal Java API service starter based on [Google Cloud Run Quickstart](https://cloud.google.com/run/docs/quickstarts/build-and-deploy/deploy-java-service). The server should run automatically when starting a workspace. To run manually, run:
+```sh
+mvn spring-boot:run
 ```
-
-2. Enter Directory:
-
-```bash
-cd digital-bank-api
-```
-
-3. Run the api:
-
-- Execute the file `App.java` located in `/src/main/java/com/example/digital_bank_api/App.java`
-
-4. Api available in:
-
-- `http://localhost:8080`
-
-## Contribution
-
-Contributions are welcome! If you have suggestions for improvements, feel free to open an issue or submit a pull request.
-
-## Author
-
-**Felipe Clarindo**
-
-- [LinkedIn](https://www.linkedin.com/in/felipeclarindo)
-- [Instagram](https://www.instagram.com/lipethecoder)
-- [GitHub](https://github.com/felipeclarindo)
-
-## License
-
-This project is licensed under the [GNU Affero License](https://www.gnu.org/licenses/agpl-3.0.html).
