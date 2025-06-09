@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"com.exemplos.configuracoes.problema2Singleton","l":"ConfigManager"}];updateSearchResults();
